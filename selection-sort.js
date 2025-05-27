@@ -20,4 +20,20 @@ const selectionSort = (arr) => {
     }
 }
 
-selectionSort(arr)
+const selectionSortVer2 = (arr) => {
+    for(let i = 0; i< arr.length; i++ ){
+        let idxMin = i
+        for(let j = i; j < arr.length; j++ ){
+            if(arr[j] < arr[idxMin]) {
+                idxMin = j
+            }
+        }
+        let swap = arr[i]
+        arr[i] = arr[idxMin]
+        arr[idxMin] = swap
+    }
+
+    console.log(arr)
+}
+
+selectionSortVer2(arr)
